@@ -11,6 +11,7 @@ html { scroll-behavior: smooth;}
 body {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 1rem;
+    background-color: #1E1E1E;
     overflow-x: hidden;
     cursor: none;
 }
@@ -64,7 +65,7 @@ body {
 }
 
 header {
-    padding: 0 1rem;
+    padding: 0 2rem;
     position: sticky;
     top: 0;
     background-color:#1E1E1E;
@@ -174,6 +175,7 @@ main {
 
 
 .catered-events {
+    padding: 0 2rem;
     background: linear-gradient(0deg, rgba(80,88,152,1) 0%, rgba(186,95,75,1) 46%, rgba(247,166,36,1) 100%);
     min-height: 200vh;
 }
@@ -183,6 +185,12 @@ main {
     color: #FFE8C2;
     padding-top: 2em;
     text-align: center;
+}
+
+.catered-events .debuts {
+    font-size: 1rem;
+    color: #FFE8C2;
+    margin-top: 5em;
 }
 
 
