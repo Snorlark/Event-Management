@@ -142,14 +142,14 @@ main {
     z-index: 0; 
 }
 
-.reveal:not(.header-img) p{
+.reveal:not(.header-img){
     position: relative;
     opacity: 0;
     top: 3rem;
     transition: all 0.5s ease-in;
 }
 
-.reveal.active{
+.reveal.active p{
     top: 0;
     opacity: 1;
 }
