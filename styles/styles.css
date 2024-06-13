@@ -47,7 +47,7 @@ body {
     opacity: 1;
 }
 
-.cursor.reveal-grow p{
+.cursor.reveal-grow {
     transform: scale(4); 
 }
 
