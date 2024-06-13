@@ -47,7 +47,7 @@ body {
     opacity: 1;
 }
 
-.cursor.reveal-grow {
+.cursor.reveal-grow p{
     transform: scale(4); 
 }
 
@@ -149,7 +149,7 @@ main {
     transition: all 0.5s ease-in;
 }
 
-.reveal.active p{
+.reveal.active {
     top: 0;
     opacity: 1;
 }
