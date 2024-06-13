@@ -142,7 +142,7 @@ main {
     z-index: 0; 
 }
 
-.reveal:not(.header-img)  {
+.reveal:not(.header-img) p{
     position: relative;
     opacity: 0;
     top: 3rem;
