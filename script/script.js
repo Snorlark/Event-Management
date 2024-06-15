@@ -1,9 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
     const cursor = document.querySelector('.cursor');
-    const slides = document.querySelectorAll('.debuts-carousel .slides img');
-    const dots = document.querySelectorAll('.dot');
-    const slidesContainer = document.querySelector('.debuts-carousel .slides');
-    let currentIndex = 0;
 
     document.addEventListener('mousemove', function(e) {
         cursor.style.top = e.pageY + 'px';
@@ -35,63 +31,78 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    function showSlide(index) {
-        const offset = -index * 100;
-        slidesContainer.style.transform = `translateX(${offset}%)`;
-        dots.forEach((dot, i) => {
-            dot.classList.toggle('active', i === index);
+    var count = 1;
+    var customChange = false;
+
+    const sliding = (x)=>{
+        var left = `-${x * 100}%`;
+        var allSlide = document.querySelector('.debuts-carousel').querySelectorAll('img');
+        var allDots = document.querySelector('.dots').querySelectorAll('div');
+
+        allSlide.forEach((element)=>{
+            element.style.left = left;
+        })
+
+        allDots.forEach((dots)=>{
+            dots.style.transform = 'scale(1)';
+            dots.style.opacity = '50%';
         });
+        allDots[x].style.transition = '0.6s';
+        allDots[x].style.transform = 'scale(1.5)';
+        allDots[x].style.opacity = '100%';
+
     }
 
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % slides.length;
-        showSlide(currentIndex);
-    }
-
-    function prevSlide() {
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        showSlide(currentIndex);
-    }
-
-    function currentSlide(index) {
-        currentIndex = index;
-        showSlide(currentIndex);
-    }
-
-    let isDragging = false;
-    let startX = 0;
-
-    const carousel = document.querySelector('.debuts-carousel');
-    carousel.addEventListener('mousedown', (e) => {
-        isDragging = true;
-        startX = e.pageX;
-        carousel.classList.add('dragging');
-    });
-
-    carousel.addEventListener('mousemove', (e) => {
-        if (isDragging) {
-            const x = e.pageX;
-            const walk = (x - startX) * 3;
-            carousel.scrollLeft -= walk;
-            startX = x;
+    setInterval(()=>{
+        if(customChange != true) {
+            if(count == 3) {
+                sliding(0);
+            }
+            else {
+                sliding(count);
+                count += 1;
+            }
         }
-    });
+    }, 3000)
 
-    carousel.addEventListener('mouseup', () => {
-        isDragging = false;
-        carousel.classList.remove('dragging');
-    });
+    const leftSwipe = () => {
+        customChange = true;
+        setTimeout(() => {customChange = false}, 2000);
+        if (count == 1) {
+            sliding(2);
+            count = 3;
+        }
+        else {
+            count -= 1;
+            sliding(count-1);
+        }
+    }
 
-    carousel.addEventListener('mouseleave', () => {
-        isDragging = false;
-        carousel.classList.remove('dragging');
-    });
+    const rightSwipe = () => {
+        customChange = true;
+        setTimeout(() => {customChange = false}, 2000);
+        if (count == 3) {
+            sliding(0);
+            count = 1;
+        }
+        else {
+            sliding(count);
+            count += 1;
+        }
+    }
 
-    showSlide(currentIndex);
+    document.querySelector('.left').addEventListener('click', leftSwipe);
+    document.querySelector('.right').addEventListener('click', rightSwipe);
 
-    document.querySelector('.left').addEventListener('click', prevSlide);
-    document.querySelector('.right').addEventListener('click', nextSlide);
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => currentSlide(index));
+    document.querySelector('.debuts-carousel').addEventListener('pointerdown', (e) => {
+        var initX = e.clientX;
+        document.querySelector('.debuts-carousel').addEventListener('pointerup', (up) => {
+            var finalX = up.clientX;
+            if (finalX - initX > 0) {
+                leftSwipe();
+            } else {
+                rightSwipe();
+            }
+        });
     });
 });

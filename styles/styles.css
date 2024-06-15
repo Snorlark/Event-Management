@@ -196,7 +196,7 @@ main {
     text-align: center;
 }
 
-.catered-events .debuts {
+.debuts {
     font-size: 1rem;
     color: #FFE8C2;
     padding: 1rem;
@@ -206,9 +206,8 @@ main {
     align-items: center;
 }
 
-
-.debuts .debuts-text {
-    width: 50%;
+.debuts-text {
+    width: 45%;
     padding-right: 2rem;
 }
 
@@ -223,48 +222,89 @@ main {
     text-align: right;
 }
 
-.debuts .debuts-carousel {
+.debuts-carousel-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 50%;
+}
+
+.debuts-carousel {
+    width: 100%;
     height: 29vw;
-    padding-left: 2rem;
     border-radius: 10px;
     position: relative;
     display: flex;
     overflow: hidden;
-    cursor: grab;
-    margin-bottom: 1rem;
+    margin: 1rem;
 }
 
 .debuts-carousel img {
+    left: 0;
     position: relative;
     border-radius: 10px;
+    cursor: grab;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .dots {
-    position: relative;
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
 }
 
 .dots div {
     height: 0.7vw;
     width: 0.7vw;
     border-radius: 2vw;
-    margin: 0.4vw;
+    margin: 0.6vw;
     transition: all 0.7s ease;
-    position: absolute;
-    display: flex;
     background-color: #1E1E1E;
 }
 
 .dots div:nth-child(1) {
-    scale: 1.5;
-
+    transform: scale(1.5);
 }
 
 .dots div:not(:nth-child(1)) {
     opacity: 50%;
 }
 
+.left {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: bold;
+    height: 2em;
+    width: 2em;
+    background: #FFE8C2;
+    padding: 0.8vw;
+    border-radius: 2rem;
+    left: -1rem;
+    bottom: 14rem;
+    color: #1E1E1E;
+    z-index: 2;
+}
+
+.right {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: bold;
+    height: 2em;
+    width: 2em;
+    background: #FFE8C2;
+    padding: 0.8vw;
+    border-radius: 2rem;
+    right: -1rem;
+    bottom: 14rem;
+    color: #1E1E1E;
+    z-index: 2;
+}
 
