@@ -13,6 +13,7 @@
     <!-- custom cursor -->
     <div class="cursor"></div>
 
+    <!-- header section -->
     <header>
         <nav>
            <ul>
@@ -39,28 +40,56 @@
            </ul>
         </nav>
     </header>
-    <main>
+
+    <!-- FOOTER SECTION (placed here for parallax reasons :p) -->
+    <footer>
+        <div class="footer-left">
+            <div>
+                <i class="fa fa-mobile"></i>
+                <p>+1 234 5678</p>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>0912 345 6789</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p>bihagevents@gmail.com</p>
+            </div>
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p>Floor 3 Cilia Lane Vista Malls, Manila City, Philippines</p>
+            </div>
+        </div>
+    </footer>
+
+    <main>       
+        <!-- MAIN IMAGE -->
         <div class="header-img reveal">
             <img src="res\header1.png" alt="header-1">
         </div>
 
+         <!-- ABOUT SECTION-->
         <section class="about reveal">
             <p class="title">About</p>
             <p class="content"><strong> Bihag Events</strong> is an innovative events management company <br> that specializes in creating and executing memorable events. <br>
                 The brand’s mission is to provide our clients with <br> exceptional event planning and management services <br> that capture the 
                 unique vision of their clients <br> and captivate its audience with a lasting impression.</p>
-            
         </section>
 
+
+        <!-- CATERED-EVENTS SECTION -->
         <section class="catered-events">
             <p class="title reveal">Catered Events</p>
-
+            
+            
+            <!-- debuts event div-->
             <div class="debuts">
                 <div class="debuts-text reveal">
                     <p class="subtitle">Debuts</p>
                     <p class="content">Having one for her coming-of-age birthday will help make the event stand out and create memories that will last!</p>
                 </div>
-                <div class="debuts-carousel-wrapper">
+                <div class="debuts-carousel-wrapper reveal">
                     <div class="left">&#10094;</div>
                     <div class="debuts-carousel reveal">
                         <img src="res/debuts1.png" alt="debuts1" draggable="false">
@@ -69,17 +98,108 @@
                     </div>
                     <div class="right">&#10095;</div>
                     <div class="dots">
+                        <div class="events-dots1"></div>
+                        <div class="events-dots2"></div>
+                        <div class="events-dots3"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- festival themed events div-->
+            <div class="themed-events">
+                <div class="events-text reveal">
+                    <p class="subtitle">Cultural-Themed Events</p>
+                    <p class="content">Celebrating festivals with the proper planning and execution contributes to how our culture will be preserved. Perfection should be attained for a memorable festival!</p>
+                </div>
+                <div class="events-carousel-wrapper reveal">
+                    <div class="left">&#10094;</div>
+                    <div class="events-carousel reveal">
+                        <img src="res/events1.png" alt="themed1" draggable="false">
+                        <img src="res/events2.png" alt="themed2" draggable="false">
+                        <img src="res/events3.png" alt="themed3" draggable="false">
+                    </div>
+                    <div class="right">&#10095;</div>
+                    <div class="events-dots">
                         <div class="dots1"></div>
                         <div class="dots2"></div>
                         <div class="dots3"></div>
                     </div>
                 </div>
             </div>
-            <div class="themed-events">
 
-            </div>
+
+            <!--weddings events div-->
             <div class="weddings">
+                <div class="weddings-text reveal">
+                    <p class="subtitle">Weddings</p>
+                    <p class="content">Using a professional event manager for your wedding is investing in a well-organized event. Have your once in a lifetime experience be extraordinary and invest in event managers!</p>
+                </div>
+                <div class="weddings-carousel-wrapper reveal">
+                    <div class="left">&#10094;</div>
+                    <div class="weddings-carousel reveal">
+                        <img src="res/wedding1.png" alt="themed1" draggable="false">
+                        <img src="res/wedding2.png" alt="themed2" draggable="false">
+                        <img src="res/wedding3.png" alt="themed3" draggable="false">
+                    </div>
+                    <div class="right">&#10095;</div>
+                    <div class="weddings-dots">
+                        <div class="dots1"></div>
+                        <div class="dots2"></div>
+                        <div class="dots3"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+
+        <!-- SERVICES-OFFERED SECION -->
+        <section class="services-offered">
+            <p class="services-offered-title reveal">Services Offered</p>
+
+            <div class="services">
+                <div class="event-design box">
+                    <img src="res/services1.png" alt="services1" class="reveal">
+                    <p class="subtitle reveal">Event Design</p>
+                    <p class="content reveal">
+                        Venue Design and Concept <br>
+                        Event Merchandise <br>
+                        Audiovisual Production and Photography
+                    </p>
+                </div>
+                <div class="event-planning box">
+                    <img src="res/services2.png" alt="services2" class="reveal">
+                    <p class="subtitle reveal">Event Planning</p>
+                    <p class="content reveal">
+                        Event Consultations <br>
+                        Supplier Management and Equipment Sourcing <br>
+                        Event Permits and Applications
+                    </p>
+                </div>
+                <div class="event-execution box">
+                    <img src="res/services3.png" alt="services3" class="reveal">
+                    <p class="subtitle reveal">Event Execution</p>
+                    <p class="content reveal">
+                        Event Registration <br>
+                        Event Staffing
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- PORTFOLIO & MILESTONES SECION -->
+        <section class="portfolio">
+            <p class="portfolio-title reveal">Portfolio & Milestones</p>
+
+            <div class="portfolio-container reveal">
+                <img id="portfolio1" src="res/portfolio1.png" alt="portfolio1">
+                <img id="portfolio2" src="res/portfolio2.png" alt="portfolio2">
+                <img id="portfolio3" src="res/portfolio3.png" alt="portfolio3">
+
+                <div id="modal" class="modal">
+                    <img class="modal-content" id="img01">
+                    <span class="close">&times;</span>
+                </div>
             </div>
         </section>
     </main>

@@ -31,78 +31,103 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    var count = 1;
-    var customChange = false;
+    const setupCarousel = (carouselSelector, dotSelector, intervalTime = 3000) => {
+        let count = 1;
+        let customChange = false;
 
-    const sliding = (x)=>{
-        var left = `-${x * 100}%`;
-        var allSlide = document.querySelector('.debuts-carousel').querySelectorAll('img');
-        var allDots = document.querySelector('.dots').querySelectorAll('div');
+        const sliding = (x) => {
+            const left = `-${x * 100}%`;
+            const allSlide = document.querySelector(carouselSelector).querySelectorAll('img');
+            const allDots = document.querySelector(dotSelector).querySelectorAll('div');
 
-        allSlide.forEach((element)=>{
-            element.style.left = left;
-        })
+            allSlide.forEach((element) => {
+                element.style.transition = 'transform 0.6s ease-in-out';
+                element.style.transform = `translateX(${left})`;
+            });
 
-        allDots.forEach((dots)=>{
-            dots.style.transform = 'scale(1)';
-            dots.style.opacity = '50%';
-        });
-        allDots[x].style.transition = '0.6s';
-        allDots[x].style.transform = 'scale(1.5)';
-        allDots[x].style.opacity = '100%';
+            allDots.forEach((dots) => {
+                dots.style.transform = 'scale(1)';
+                dots.style.opacity = '50%';
+            });
 
-    }
+            allDots[x].style.transition = 'transform 0.6s ease-in-out, opacity 0.6s ease-in-out';
+            allDots[x].style.transform = 'scale(1.5)';
+            allDots[x].style.opacity = '100%';
+        };
 
-    setInterval(()=>{
-        if(customChange != true) {
-            if(count == 3) {
-                sliding(0);
+        const leftSwipe = () => {
+            customChange = true;
+            setTimeout(() => { customChange = false; }, 2000);
+            if (count === 1) {
+                sliding(document.querySelector(carouselSelector).querySelectorAll('img').length - 1);
+                count = document.querySelector(carouselSelector).querySelectorAll('img').length;
+            } else {
+                count -= 1;
+                sliding(count - 1);
             }
-            else {
+        };
+
+        const rightSwipe = () => {
+            customChange = true;
+            setTimeout(() => { customChange = false; }, 2000);
+            if (count === document.querySelector(carouselSelector).querySelectorAll('img').length) {
+                sliding(0);
+                count = 1;
+            } else {
                 sliding(count);
                 count += 1;
             }
-        }
-    }, 3000)
+        };
 
-    const leftSwipe = () => {
-        customChange = true;
-        setTimeout(() => {customChange = false}, 2000);
-        if (count == 1) {
-            sliding(2);
-            count = 3;
-        }
-        else {
-            count -= 1;
-            sliding(count-1);
-        }
-    }
-
-    const rightSwipe = () => {
-        customChange = true;
-        setTimeout(() => {customChange = false}, 2000);
-        if (count == 3) {
-            sliding(0);
-            count = 1;
-        }
-        else {
-            sliding(count);
-            count += 1;
-        }
-    }
-
-    document.querySelector('.left').addEventListener('click', leftSwipe);
-    document.querySelector('.right').addEventListener('click', rightSwipe);
-
-    document.querySelector('.debuts-carousel').addEventListener('pointerdown', (e) => {
-        var initX = e.clientX;
-        document.querySelector('.debuts-carousel').addEventListener('pointerup', (up) => {
-            var finalX = up.clientX;
-            if (finalX - initX > 0) {
-                leftSwipe();
-            } else {
-                rightSwipe();
-            }
+        document.querySelectorAll('.left').forEach(btn => {
+            btn.addEventListener('click', leftSwipe);
         });
+
+        document.querySelectorAll('.right').forEach(btn => {
+            btn.addEventListener('click', rightSwipe);
+        });
+
+        document.querySelectorAll(carouselSelector).forEach(carousel => {
+            carousel.addEventListener('pointerdown', (e) => {
+                const initX = e.clientX;
+                carousel.addEventListener('pointerup', (up) => {
+                    const finalX = up.clientX;
+                    if (finalX - initX > 0) {
+                        leftSwipe();
+                    } else {
+                        rightSwipe();
+                    }
+                });
+            });
+        });
+    };
+
+    // Setup carousels for different sections
+    setupCarousel('.debuts-carousel', '.dots');
+    setupCarousel('.events-carousel', '.events-dots');
+    setupCarousel('.weddings-carousel', '.weddings-dots');
+
+    // Modal functionality for portfolio images
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("img01");
+
+    // Get all portfolio images
+    const portfolioImages = document.querySelectorAll(".portfolio-container img");
+
+    // Loop through each portfolio image and attach click event
+    portfolioImages.forEach((img, index) => {
+        img.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            modalImg.alt = this.alt; // Optional: Set alt text as caption
+        }
     });
+
+    // Get the <span> element that closes the modal
+    const span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+        modal.style.display = "none";
+    }
 });

@@ -11,8 +11,8 @@ html { scroll-behavior: smooth;}
 body {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 1rem;
-    background-color: #1E1E1E;
     overflow-x: hidden;
+    background: #1E1E1E;
     cursor: none;
 }
 
@@ -58,7 +58,7 @@ body {
 ::-webkit-scrollbar-track {
     background-color: #1E1E1E;
 }
-  
+
 ::-webkit-scrollbar-thumb {
     border-radius: 20px;
     background: linear-gradient(0deg, rgba(186,95,75,1) 0%, rgba(247,166,36,1) 100%);
@@ -71,8 +71,10 @@ header {
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     background-color: #1e1e1eaf;
-    z-index: 1;
+    z-index: 2;
 }
+
+/* =============== HEADER =============== */
 
 header nav ul {
     display: flex;
@@ -129,8 +131,10 @@ header ul li a:hover .popup-text {
 }
 
 main {
+    position: relative;
     background-color: #1E1E1E;
     min-height: 100vh;
+    margin: 0 0 70vh 0;
 }
 
 .header-img {
@@ -158,6 +162,8 @@ main {
     transition: all 0.5s ease-in;
 }
 
+
+
 .reveal.active {
     top: 0;
     opacity: 1;
@@ -183,8 +189,10 @@ main {
 }
 
 
+/* =============== CATERED EVENTS =============== */
+
 .catered-events {
-    padding: 0 3rem;
+    padding: 3rem 3rem;
     background: linear-gradient(0deg, rgba(80,88,152,1) 0%, rgba(186,95,75,1) 46%, rgba(247,166,36,1) 100%);
     min-height: 200vh;
 }
@@ -192,9 +200,11 @@ main {
 .catered-events .title {
     font-size: 2.5rem;
     color: #FFE8C2;
-    padding-top: 2em;
+    padding-top: 1em;
     text-align: center;
 }
+
+/* >>>>> debuts <<<<<  */
 
 .debuts {
     font-size: 1rem;
@@ -272,6 +282,85 @@ main {
     opacity: 50%;
 }
 
+
+/* >>>>> cultural themed events <<<<<  */
+
+.themed-events {
+    font-size: 1rem;
+    color: #FFE8C2;
+    padding: 1rem;
+    margin-top: 5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.events-text {
+    width: 45%;
+    padding-right: 2rem;
+}
+
+.events-text .subtitle {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.events-text .content {
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.events-carousel-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.events-carousel {
+    width: 100%;
+    height: 29vw;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    margin: 1rem;
+}
+
+.events-carousel img {
+    left: 0;
+    position: relative;
+    border-radius: 10px;
+    cursor: grab;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.events-dots {
+    display: flex;
+    justify-content: center;
+}
+
+.events-dots div {
+    height: 0.7vw;
+    width: 0.7vw;
+    border-radius: 2vw;
+    margin: 0.6vw;
+    transition: all 0.7s ease;
+    background-color: #1E1E1E;
+}
+
+.events-dots div:nth-child(1) {
+    transform: scale(1.5);
+}
+
+.events-dots div:not(:nth-child(1)) {
+    opacity: 50%;
+}
+
 .left {
     position: absolute;
     display: flex;
@@ -287,7 +376,8 @@ main {
     left: -1rem;
     bottom: 14rem;
     color: #1E1E1E;
-    z-index: 2;
+    z-index: 1;
+    cursor: pointer;
 }
 
 .right {
@@ -305,6 +395,270 @@ main {
     right: -1rem;
     bottom: 14rem;
     color: #1E1E1E;
-    z-index: 2;
+    z-index: 1;
+    cursor: pointer;
 }
 
+/* >>>>> weddings <<<<<  */
+
+.weddings {
+    font-size: 1rem;
+    color: #FFE8C2;
+    padding: 1rem;
+    margin-top: 5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weddings-text {
+    width: 45%;
+    padding-right: 2rem;
+}
+
+.weddings-text .subtitle {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.weddings-text .content {
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.weddings-carousel-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.weddings-carousel {
+    width: 100%;
+    height: 29vw;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    margin: 1rem;
+}
+
+.weddings-carousel img {
+    left: 0;
+    position: relative;
+    border-radius: 10px;
+    cursor: grab;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.weddings-dots {
+    display: flex;
+    justify-content: center;
+}
+
+.weddings-dots div {
+    height: 0.7vw;
+    width: 0.7vw;
+    border-radius: 2vw;
+    margin: 0.6vw;
+    transition: all 0.7s ease;
+    background-color: #1E1E1E;
+}
+
+.weddings-dots div:nth-child(1) {
+    transform: scale(1.5);
+}
+
+.weddings-dots div:not(:nth-child(1)) {
+    opacity: 50%;
+}
+
+
+/* =============== SERVICES OFFERED =============== */
+
+.services-offered {
+    padding: 3rem 3rem;
+    background: #1E1E1E;
+    color: #FFE8C2;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services-offered-title {
+    font-size: 2.5rem;
+    color: #FFE8C2;
+    padding-top: 1em;
+    text-align: center;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.box {
+    flex: 1;
+    padding: 2rem;
+    max-width: 80vw;
+    text-align: center;
+}
+
+.box img {
+    max-width: 100%;
+    height: auto;
+}
+
+.services .subtitle {
+    font-size: 2rem;
+    margin-bottom: 0.5em;
+}
+
+
+/* =============== PORTFOLIO & MILESTONES =============== */
+
+.portfolio {
+    padding: 5rem 3rem;
+    padding-bottom: 10rem;
+    background: linear-gradient(rgba(247,166,36,1),rgba(186,95,75,1));
+    color: #FFE8C2;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0 0 40px 40px;
+}
+
+.portfolio-title {
+    font-size: 2.5rem;
+    color: #FFE8C2;
+    padding-top: 1em;
+    text-align: center;
+}
+
+.portfolio-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 3rem;
+    gap: 2rem;
+}
+
+.portfolio-container img {
+    cursor: pointer;
+    border-radius: 10px;
+    transition: ease 0.5s;
+}
+
+.portfolio-container img:hover {
+    box-shadow: 0 0 10px #1e1e1ea8;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0, 0, 0, 0.623);
+    z-index: 3;
+  }
+  
+  /* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    padding: 2rem auto;
+    width: 50vw;
+    height: 100%;
+}
+  
+.modal-content, #caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+  
+ @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+  
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+  
+  
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+  
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+  
+@media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+}
+
+
+/* =============== FOOTER =============== */
+
+footer {
+    position: fixed;
+    background-color: #1E1E1E;
+    color: #FFE8C2;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 70vh;
+    text-align: left;
+    padding: 60px 50px;
+    bottom: 0;
+}
+
+.footer-left {
+    min-width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-left i {
+    display: inline-block;
+    padding-right: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-left p {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+}
+     
