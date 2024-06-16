@@ -84,7 +84,7 @@ header {
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     background-color: #1e1e1eaf;
-    z-index: 2;
+    z-index: 3;
 }
 
 /* =============== HEADER =============== */
