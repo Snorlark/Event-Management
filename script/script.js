@@ -1,3 +1,11 @@
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+
 document.addEventListener('DOMContentLoaded', function() {
     const cursor = document.querySelector('.cursor');
 
@@ -30,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
 
     const setupCarousel = (carouselSelector, dotSelector, intervalTime = 3000) => {
         let count = 1;
@@ -106,6 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setupCarousel('.debuts-carousel', '.dots');
     setupCarousel('.events-carousel', '.events-dots');
     setupCarousel('.weddings-carousel', '.weddings-dots');
+
 
     // Modal functionality for portfolio images
     const modal = document.getElementById("modal");

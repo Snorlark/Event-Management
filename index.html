@@ -42,24 +42,32 @@
     </header>
 
     <!-- FOOTER SECTION (placed here for parallax reasons :p) -->
-    <footer>
-        <div class="footer-left">
-            <div>
-                <i class="fa fa-mobile"></i>
-                <p>+1 234 5678</p>
+    <footer >
+        <div class="footer-content">
+            <div class="footer-left">
+                <div>
+                    <i class="fa fa-mobile"></i>
+                    <p>+1 234 5678</p>
+                </div>
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <p>0912 345 6789</p>
+                </div>
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <p>bihagevents@gmail.com</p>
+                </div>
+                <div>
+                    <i class="fa fa-map-marker"></i>
+                    <p>Floor 3 Cilia Lane Vista Malls, Manila City, Philippines</p>
+                </div>
             </div>
-            <div>
-                <i class="fa fa-phone"></i>
-                <p>0912 345 6789</p>
+            <div class="footer-right">
+                <img src="res/logofooter.png" alt="Bihag Events Logo">
             </div>
-            <div>
-                <i class="fa fa-envelope"></i>
-                <p>bihagevents@gmail.com</p>
-            </div>
-            <div>
-                <i class="fa fa-map-marker"></i>
-                <p>Floor 3 Cilia Lane Vista Malls, Manila City, Philippines</p>
-            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Bihag Events - All Rights Reserved.</p>
         </div>
     </footer>
 
@@ -69,6 +77,20 @@
             <img src="res\header1.png" alt="header-1">
         </div>
 
+        <!-- CHATBOX POPUP CONTAINER -->
+        <button class="open-button" onclick="openForm()"> 
+            <i class="fa fa-commenting"></i>
+        </button>
+
+        <div class="chat-popup" id="myForm">
+            <form class="form-container">
+                <button type="button" class="btn cancel" onclick="closeForm()">Close chat</button>
+                <textarea placeholder="Type message.." name="msg" required></textarea>
+
+                <button type="submit" class="btn send">Send</button>
+            </form>
+        </div>
+        
          <!-- ABOUT SECTION-->
         <section class="about reveal">
             <p class="title">About</p>
@@ -76,7 +98,6 @@
                 The brand’s mission is to provide our clients with <br> exceptional event planning and management services <br> that capture the 
                 unique vision of their clients <br> and captivate its audience with a lasting impression.</p>
         </section>
-
 
         <!-- CATERED-EVENTS SECTION -->
         <section class="catered-events">
@@ -191,13 +212,13 @@
         <section class="portfolio">
             <p class="portfolio-title reveal">Portfolio & Milestones</p>
 
-            <div class="portfolio-container reveal">
-                <img id="portfolio1" src="res/portfolio1.png" alt="portfolio1">
-                <img id="portfolio2" src="res/portfolio2.png" alt="portfolio2">
-                <img id="portfolio3" src="res/portfolio3.png" alt="portfolio3">
+            <div class="portfolio-container">
+                <img id="portfolio1" src="res/portfolio1.png" alt="portfolio1" class="reveal">
+                <img id="portfolio2" src="res/portfolio2.png" alt="portfolio2" class="reveal">
+                <img id="portfolio3" src="res/portfolio3.png" alt="portfolio3" class="reveal">
 
                 <div id="modal" class="modal">
-                    <img class="modal-content" id="img01">
+                    <img class="modal-content reveal" id="img01">
                     <span class="close">&times;</span>
                 </div>
             </div>
