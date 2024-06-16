@@ -305,7 +305,6 @@ footer {
 main {
     position: relative;
     background: linear-gradient(0deg, rgba(247,166,36,1)  0%, rgba(186,95,75,1) 46%,rgba(80,88,152,1) 100%);
-    min-height: 200vh;
     margin: 0 0 50vh 0;
     padding: 0 2rem;
     border-radius: 0 0 40px 40px;
@@ -328,7 +327,7 @@ main {
 
 /* =============== SERVICES CONTAINER =============== */
 
-.services-container {
+.portfolio-container {
     display: flex;
     padding: 7rem 0;
     gap: 3em;
@@ -336,42 +335,197 @@ main {
     flex-wrap: wrap;
 }
 
-.box {
-    background: #FFE8C2;
-    padding: 2rem;
+.portfolio-container img {
+    cursor: pointer;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: ease 0.5s;
+}
+
+.portfolio-container img:hover {
+    box-shadow: 0 0 10px #1e1e1ea8;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0, 0, 0, 0.623);
+    z-index: 3;
+    scroll-behavior: auto;
+  }
+  
+  /* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    padding: 2rem auto;
+    width: 50vw;
+    height: 100%;
+}
+  
+.modal-content, #caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+  
+ @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+  
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+  
+  
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+  
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+  
+@media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+}
+
+
+/* =============== INSTAGRAM FEED SECTION =============== */
+
+.feed {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    color: #FFE8C2;
+    padding: 0 1rem;
+}
+
+.feed .title-container {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    text-align: center;
-    width: calc(33.33% - 2em);
-    margin-bottom: 3em; 
 }
 
-.box img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+.feed .title {
+    font-size: 30px;
 }
 
-.services-container .subtitle {
-    font-size: 2rem;
-    padding: 0.5em;
+.feed .subtitle {
+    font-size: 18px;
+    text-align: right;
 }
 
-.services-container p {
-    text-align: center;
+.row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px 4px;
 }
 
-@media (max-width: 768px) {
-    .services-container {
-        padding: 3rem 0;
-    }
-    
-    .box {
-        width: calc(50% - 1em); /* Adjust width for 2 columns on smaller screens */
-    }
+.column {
+    flex: 25%;
+    max-width: 50%;
+    padding: 0 4px;
+    margin-bottom: 8rem;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    cursor: pointer;
+}
+
+.column-img {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.column-img::before {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background-image: url('https://unpkg.com/css.gg/icons/svg/instagram.svg');
+    background-size: cover;
+    z-index: 1;
+    filter: invert(1);  
+}
+
+.column-img img {
+    margin-top: 10px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.caption {
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    bottom: 30px;
+    left: 16px;
+    opacity: 0;
+    transition: 0.5s ease;
+    z-index: 2;
+    transition: all ease-in 0.3s
+}
+
+.text {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    opacity: 0;
+    transition: 0.5s ease;
+    z-index: 2;
+    transition: all ease-in 0.3s
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-top: 30%;
+    width: 100%;
+    height: 0; /* Adjust the height as needed */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0)); /* Gradient overlay */
+    z-index: 1; /* Above the image but below the text */
+    transition: all ease-in 0.3s;
+}
+
+.column-img:hover .overlay {
+    height: 100%;
+}
+
+.column-img:hover .text {
+    opacity: 1;
+}
+
+.column-img:hover .caption {
+    opacity: 1;
 }
