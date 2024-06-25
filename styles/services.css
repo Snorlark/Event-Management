@@ -121,6 +121,12 @@ header ul li:nth-child(2) a {
     color: #F4B22F;
 } 
 
+
+header ul li:hover {
+    transform: translateY(-3px);
+    transition: all .70s ease;
+}
+
 header ul li a:hover,
 header ul li a:focus {
     cursor: none;
@@ -352,19 +358,13 @@ main {
     margin-bottom: 3em; 
     transition: all .70s ease;
 }
-/* Hide the custom cursor when hovering over an image */
-.box:hover + .cursor.reveal:not(), 
-.box:hover ~ .cursor.reveal:not() {
-    display: none;
-
-}
 
 .box:hover {
     border: 1px solid #d1d1d1bd;
     border-radius: 35px;    
     height: auto;
     box-shadow: 0 0 30px rgba(189, 173, 48, 0.728);
-    background-color: #ac71021e;
+    background-color: #724a0025;
     transform: translatey(-12px);
     color: #FFE8C2;
     cursor: none;

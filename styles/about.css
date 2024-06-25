@@ -119,6 +119,11 @@ header ul li:nth-child(5) a {
     color: #F4B22F;
 } 
 
+header ul li:hover {
+    transform: translateY(-3px);
+    transition: all .70s ease;
+}
+
 header ul li a:hover,
 header ul li a:focus {
     cursor: none;
@@ -305,7 +310,7 @@ footer {
 main {
     position: relative;
     background: linear-gradient(0deg, rgba(247,166,36,1)  0%, rgba(186,95,75,1) 46%,rgba(80,88,152,1) 100%);
-    min-height: 200vh;
+    min-height: 175vh;
     margin: 0 0 50vh 0;
     padding: 0 2rem;
     border-radius: 0 0 40px 40px;

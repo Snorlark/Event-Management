@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Management | Services</title>
-    <link rel="stylesheet" href="styles/book-event2.css">
+    <link rel="stylesheet" href="styles/book-event2.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="script/script.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 </head>
 <body>
@@ -24,7 +24,7 @@
                     <i class="fa fa-home"></i>
                     <span class="popup-text">Home</span>
                 </a></li>
-                <li><a href="#">
+                <li><a href="services.html">
                     <i class="fa fa-suitcase"></i>
                     <span class="popup-text">Services</span>
                 </a></li>
@@ -32,7 +32,7 @@
                     <i class="fa fa-star"></i>
                     <span class="popup-text">Portfolio</span>
                 </a></li>
-                <li><a href="book-event.html">
+                <li><a href="#">
                     <i class="fa fa-book"></i>
                     <span class="popup-text">Book Event</span>
                 </a></li>
@@ -91,7 +91,7 @@
 
 
     <!-- MAIN  -->
-   <main>       
+   <main>   
         <br><br><br><br>
         <div class="stepsbook">
             <a href="book-event.html"><i class="ri-calendar-2-line"></i></a>
@@ -100,14 +100,59 @@
             <a href="book-event4.html"><i class="ri-git-repository-line"></i></a>            
         </div> 
 
+        
         <div class="page-container">
             <p class="page-title reveal">SELECT PACKAGE</p>
             <p class="page-content"> Which services would you like to avail?</p>   
+        </div>
 
-            <div class="wrapper">
-                <input type="checkbox" id="check" />
-                <label for="check">Checkbox</label>
-              </div>
+        <section class="package">
+
+            <div class="selection">
+                <div class="wrapper">
+                    <input type="checkbox" id="eventdesign" />
+                    <label for="eventdesign">Event Design</label>
+                </div>
+
+                <div class="wrapper">
+                    <input type="checkbox" id="eventplanning" />
+                    <label for="eventplanning">Event Planning</label>
+                </div>
+
+                <div class="wrapper">
+                    <input type="checkbox" id="eventcoordination" />
+                    <label for="eventcoordination">Event Coordination</label>
+                </div>
+
+                <div class="wrapper">
+                    <input type="checkbox" id="catering" />
+                    <label for="catering">Catering</label>
+                </div>
+
+                <div class="wrapper">
+                    <input type="checkbox" id="entertainment" />
+                    <label for="entertainment">Entertainment</label>
+                </div>
+
+                <div class="wrapper">
+                    <input type="checkbox" id="photography" />
+                    <label for="photography">Photography</label>
+                </div>
+            </div>
+
+            <div class="inputtext">
+                <form class="form-containersmall">
+                    <textarea placeholder="Event Type" name="msg" required></textarea>
+                </form>
+                <form class="form-containerbig">
+                    <textarea placeholder="Additional Details" name="msg" required></textarea>
+                </form>
+                
+            </div>
+
+        </section>
+        
+
         </div>
 
         

@@ -119,6 +119,11 @@ header ul li:nth-child(3) a {
     color: #F4B22F;
 } 
 
+header ul li:hover {
+    transform: translateY(-3px);
+    transition: all .70s ease;
+}
+
 header ul li a:hover,
 header ul li a:focus {
     cursor: none;
