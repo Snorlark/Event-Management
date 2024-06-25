@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management | Services</title>
+    <link rel="stylesheet" href="styles/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script/script.js"></script>
+</head>
+<body>
+    <!-- custom cursor -->
+    <div class="cursor"></div>
+
+    <!-- header section -->
+    <header>
+        <nav>
+           <ul>
+                <li><a href="index.html">
+                    <i class="fa fa-home"></i>
+                    <span class="popup-text">Home</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="fa fa-suitcase"></i>
+                    <span class="popup-text">Services</span>
+                </a></li>
+                <li><a href="portfolio.html">
+                    <i class="fa fa-star"></i>
+                    <span class="popup-text">Portfolio</span>
+                </a></li>
+                <li><a href="book-event.html">
+                    <i class="fa fa-book"></i>
+                    <span class="popup-text">Book Event</span>
+                </a></li>
+                <li><a href="about.html">
+                    <i class="fa fa-info-circle"></i>
+                    <span class="popup-text">About</span>
+                </a></li>
+           </ul>
+        </nav>
+    </header>
+
+    <!-- FOOTER SECTION (placed here for parallax reasons :p) -->
+    <footer >
+        <div class="footer-content">
+            <div class="footer-left">
+                <div>
+                    <i class="fa fa-mobile"></i>
+                    <p>+1 234 5678</p>
+                </div>
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <p>0912 345 6789</p>
+                </div>
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <p>bihagevents@gmail.com</p>
+                </div>
+                <div>
+                    <i class="fa fa-map-marker"></i>
+                    <p>Floor 3 Cilia Lane Vista Malls, Manila City, Philippines</p>
+                </div>
+            </div>
+            <div class="footer-right">
+                <img src="res/logofooter.png" alt="Bihag Events Logo">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Bihag Events - All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+    <!-- CHATBOX POPUP CONTAINER -->
+    <button class="open-button" onclick="openForm()"> 
+        <i class="fa fa-commenting"></i>
+    </button>
+
+    <div class="chat-popup" id="myForm">
+        <form class="form-container">
+            <button type="button" class="btn cancel" onclick="closeForm()">Close chat</button>
+            <textarea placeholder="Type message.." name="msg" required></textarea>
+
+            <button type="submit" class="btn send">Send</button>
+        </form>
+    </div>
+
+
+    <!-- MAIN  -->
+    <main>       
+        <div class="page-container">
+            <p class="page-title reveal">ABOUT</p>
+            <p class="content"><strong> Sinagtala </strong> is an innovative events management company <br> that specializes in creating and executing memorable events. <br>
+                The brand’s mission is to provide our clients with <br> exceptional event planning and management services <br> that capture the 
+                unique vision of their clients <br> and captivate its audience with a lasting impression.</p>        
+        </div>
+    </main>
+</body>
+</html>
