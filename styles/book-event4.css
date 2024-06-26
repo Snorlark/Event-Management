@@ -441,10 +441,11 @@ footer {
 /* =============== checkbox =============== */
 
 .wrapper {
-    margin-bottom: 15px;
-    margin-left: 10px;
-    letter-spacing: 1px;
-    font-weight: 50;
+    margin-top: 50px;
+    margin-left: 35%;
+    margin-right: 35%;
+    align-items: center;
+    justify-content: center;
 }
   input[type="checkbox"] {
     appearance: none;
@@ -485,39 +486,8 @@ footer {
   input[type="checkbox"]:checked:after {
     display: block;
   }
-  
-
-  .form-containerbig textarea {
-    width: 150%;
-    padding: 15px;
-    border: none;
-    background: #FFE8C2;
-    resize: none;
-    min-height: 200px;
-    }
-
-  .form-containerbig textarea:focus {
-        background-color: #f8d6a0;
-        outline: none;
-        border-radius: 12px;
-  }
-
-  .form-containersmall textarea {
-    width: 150%;
-    padding-top: 10px;
-    padding-left: 15px;
-    border: none;
-    background: #FFE8C2;
-    resize: none;
-    min-height: 10px;
-  }
-  .form-containersmall textarea:focus {
-        background-color: #f8d6a0;
-        outline: none;
-        border-radius: 12px;
-  }
-
-  .selection{
+/* 
+.selection{
     margin-top: 60px;
     margin-left: 30rem;
     margin-right: 30rem;
@@ -525,10 +495,18 @@ footer {
     align-items: center;
     justify-content: center;
     position: relative;
-}
+} */
 
 span{
     color: #F4B22F;
+}
+
+.buttoncontainer {
+    margin-right: 10%;
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btnbook {
@@ -543,12 +521,7 @@ span{
     transition: all .50s ease;
     cursor: pointer;
     text-decoration: none;
-    display: flex;
-    align-items: center;
     padding: 18px;
-    justify-content: center;
-    margin-left: 42rem;
-    margin-right: 42rem;
 }
 
 .btnbook:hover{

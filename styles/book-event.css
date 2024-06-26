@@ -15,7 +15,6 @@ body {
     overflow-x: hidden;
     background: #1E1E1E;
     cursor: default;
-    
 }
 
 /* .cursor {
@@ -434,6 +433,40 @@ footer {
     justify-content: center;
 }
 
+.buttoncontainer {
+    margin-right: 10%;
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnbook {
+    display: inline-block;
+    padding: 13px 35px;
+    background:#FFE8C2;
+    color: #000000fe;
+    font-size: 15px;
+    font-weight: 600;
+    border: 30px;
+    border-radius: 30px;
+    transition: all .50s ease;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 18px;
+}
+
+.btnbook:hover{
+    font-weight: 700;
+    letter-spacing: 2%;
+    border: 1px solid #FFE8C2;
+    background: transparent;
+    color: #FFE8C2;    
+    box-shadow: 0 0 20px rgba(228, 217, 131, 0.728);
+
+}
+
+
 @media (max-width: 768px) {
     .services-container {
         padding: 3rem 0;
@@ -469,4 +502,3 @@ select {
     border: 1px solid #FFE8C2;
     background-color: #FFE8C2;
 }
-
