@@ -439,7 +439,9 @@ footer {
 /* =============== checkbox =============== */
 
 .selection{
-    margin-left: 30rem;
+    margin-top: 40px;
+    margin-left: 43.5%;
+    margin-right: 40%;
     align-items: center;
     justify-content: center;
 }
@@ -449,7 +451,7 @@ footer {
     letter-spacing: 2px;
     font-weight: 50;
 }
-  input[type="checkbox"] {
+input[type="checkbox"] {
     appearance: none;
     -webkit-appearance: none;
     height: 16px;
@@ -460,14 +462,14 @@ footer {
     cursor: pointer;
     align-items: center;
     justify-content: center;
-  }
-  label {
+}
+label {
     color: #FFE8C2;
     font-size: 18px;
     font-family: 'Space Grotesk', sans-serif;
     cursor: pointer;
-  }
-  input[type="checkbox"]:after {
+}
+input[type="checkbox"]:after {
     font-family:"Font Awesome 6 Free";
     content: "\f00c";
     font-weight: 900;
@@ -477,58 +479,50 @@ footer {
     text-align: center;
     align-items: center;
     justify-content: center;
-  }
-  input[type="checkbox"]:hover {
+}
+input[type="checkbox"]:hover {
     background-color: #d7c3a3ba;
     box-shadow: 0 0 20px rgba(225, 210, 94, 0.757);
-  }
-  input[type="checkbox"]:checked {
+}
+input[type="checkbox"]:checked {
     background-color: #FFE8C2;
-  }
-  input[type="checkbox"]:checked:after {
+}
+input[type="checkbox"]:checked:after {
     display: block;
-  }
-  
-
-  .form-containerbig textarea {
-    width: 150%;
-    padding: 15px;
-    border: none;
-    background: #FFE8C2;
-    resize: none;
-    min-height: 200px;
-    }
-
-  .form-containerbig textarea:focus {
-        background-color: #f8d6a0;
-        outline: none;
-        border-radius: 12px;
-  }
-
-  .form-containersmall textarea {
-    width: 150%;
-    padding-top: 10px;
-    padding-left: 15px;
-    border: none;
-    background: #FFE8C2;
-    resize: none;
-    min-height: 10px;
-  }
-  .form-containersmall textarea:focus {
-        background-color: #f8d6a0;
-        outline: none;
-        border-radius: 12px;
-  }
-
-  .selection{
-    margin-top: 60px;
-    margin-left: 42rem;
-    position: relative;
-    align-items: center;
-    justify-content: flex-start;
 }
 
+.buttoncontainer {
+    margin-right: 10%;
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.btnbook {
+    display: inline-block;
+    padding: 13px 35px;
+    background:#FFE8C2;
+    color: #000000fe;
+    font-size: 15px;
+    font-weight: 600;
+    border: 30px;
+    border-radius: 30px;
+    transition: all .50s ease;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 18px;
+}
+
+.btnbook:hover{
+    font-weight: 700;
+    letter-spacing: 2%;
+    border: 1px solid #FFE8C2;
+    background: transparent;
+    color: #FFE8C2;    
+    box-shadow: 0 0 20px rgba(228, 217, 131, 0.728);
+
+}
 
 @media (max-width: 768px) {
     .services-container {
