@@ -28,7 +28,7 @@ body {
     mix-blend-mode:difference;
     transition: all 0.1s ease-out;
 }
-
+/* 
 .cursor::after {
     content: '';
     position: absolute;
@@ -45,10 +45,12 @@ body {
 
 .cursor:hover::after {
     opacity: 1;
-}
+} */
 
 .cursor.reveal-grow {
-    transform: scale(3); 
+    transform: scale(2); 
+    
+    
 }
 
 ::-webkit-scrollbar {
@@ -118,6 +120,12 @@ header ul li img {
 header ul li:nth-child(2) a {
     color: #F4B22F;
 } 
+
+
+header ul li:hover {
+    transform: translateY(-3px);
+    transition: all .70s ease;
+}
 
 header ul li a:hover,
 header ul li a:focus {
@@ -337,9 +345,9 @@ main {
 }
 
 .box {
-    background: #FFE8C2;
+    background: #ffe8c2ac;
     padding: 2rem;
-    border-radius: 10px;
+    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
@@ -348,6 +356,21 @@ main {
     text-align: center;
     width: calc(33.33% - 2em);
     margin-bottom: 3em; 
+    transition: all .70s ease;
+}
+
+.box:hover {
+    border: 1px solid #d1d1d1bd;
+    border-radius: 35px;    
+    height: auto;
+    box-shadow: 0 0 30px rgba(189, 173, 48, 0.728);
+    background-color: #724a0025;
+    transform: translatey(-12px);
+    color: #FFE8C2;
+    cursor: none;
+    text-shadow:  0 0 20px rgba(0, 0, 0, 0.528);
+    transition: all .70s ease;
+    
 }
 
 .box img {
@@ -356,6 +379,9 @@ main {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
+
+
 
 .services-container .subtitle {
     font-size: 2rem;

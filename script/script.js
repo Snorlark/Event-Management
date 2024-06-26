@@ -139,5 +139,27 @@ document.addEventListener('DOMContentLoaded', function() {
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() { 
         modal.style.display = "none";
+    }  
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const yearSelect = document.getElementById('year');
+    const daySelect = document.getElementById('day');
+
+    // Populate years from 1900 to the current year
+    const currentYear = new Date().getFullYear();
+    for (let i = 2024; i <= 2026; i++) {
+        const option = document.createElement('option');
+        option.value = i;
+        option.textContent = i;
+        yearSelect.appendChild(option);
+    }
+
+    // Populate days from 1 to 31
+    for (let i = 1; i <= 31; i++) {
+        const option = document.createElement('option');
+        option.value = i;
+        option.textContent = i;
+        daySelect.appendChild(option);
     }
 });
+

@@ -86,6 +86,7 @@ header ul li {
     position: relative;
     display: inline-block;
     margin: 1rem;
+    transition: all .50s ease;
 }
 
 header ul li a {
@@ -102,10 +103,15 @@ header ul li img {
     height: 1.5rem;
 }
 
+
 header ul li:nth-child(1) a {
     color: #F4B22F;
 } 
 
+header ul li:hover {
+    transform: translateY(-3px);
+    transition: all .70s ease;
+}
 header ul li a:hover,
 header ul li a:focus {
     cursor: none;
@@ -337,6 +343,8 @@ main {
     display: flex;
     overflow: hidden;
     margin: 1rem;
+    pointer-events: none;
+
 }
 
 .debuts-carousel img {
@@ -451,7 +459,7 @@ main {
 }
 
 .left {
-    position: absolute;
+    position:absolute;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -544,9 +552,12 @@ main {
     object-fit: cover;
 }
 
+
+
 .weddings-dots {
     display: flex;
     justify-content: center;
+  
 }
 
 .weddings-dots div {
@@ -584,6 +595,7 @@ main {
     color: #FFE8C2;
     padding-top: 1em;
     text-align: center;
+    margin-bottom: 4%;
 }
 
 .services {
@@ -595,14 +607,34 @@ main {
 
 .box {
     flex: 1;
-    padding: 2rem;
+    padding: 1rem;
     max-width: 80vw;
     text-align: center;
+    padding-bottom: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border:  0.2px solid #d1d1d151;
+    transition: all .70s ease;
 }
 
-.box img {
-    max-width: 100%;
+.box:hover {
+    border: 1px solid #d1d1d1bd;
+    border-radius: 50px;    
     height: auto;
+    /* background-color: #ac710231; */
+    /* background-color: #2e101046; */
+    box-shadow: 0 0 30px rgba(189, 173, 48, 0.728);
+    transform: translatey(-12px);
+    transition: all .70s ease;
+    
+}
+
+
+.box img {
+    max-width: 50%;
+    height: auto;
+    margin: 10%;
+    margin-bottom: 12%;
 }
 
 .services .subtitle {
@@ -642,13 +674,17 @@ main {
 }
 
 .portfolio-container img {
-    cursor: pointer;
+    cursor: none;
     border-radius: 10px;
     transition: ease 0.5s;
 }
 
 .portfolio-container img:hover {
-    box-shadow: 0 0 10px #1e1e1ea8;
+    /* box-shadow: 0 0 10px #1e1e1ea8; */
+    margin-right: 1%;
+    margin-left: 1%;
+    box-shadow: 0 0 30px rgba(255, 246, 176, 0.801);
+
 }
 
 .modal {
