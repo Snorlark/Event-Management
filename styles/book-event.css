@@ -476,3 +476,29 @@ footer {
         width: calc(50% - 1em); /* Adjust width for 2 columns on smaller screens */
     }
 }
+.calendar-container {
+    color: #FFE8C2;
+    height: 100px;
+    width: auto;
+    padding: 20px;
+    border-radius: 8px;
+    gap: 20px; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.calendar-selector {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    margin-bottom: 5px;
+}
+select {
+    font-family: 'Space Grotesk', sans-serif;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #FFE8C2;
+    background-color: #FFE8C2;
+}
